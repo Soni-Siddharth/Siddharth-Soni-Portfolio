@@ -858,5 +858,21 @@ Engineered by <strong>Siddharth Soni</strong> — Automating the future of busin
 
   document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 </script>
+
+ <script>
+  // Disable right click
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // Disable key shortcuts
+  document.addEventListener('keydown', function (e) {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
+      (e.ctrlKey && e.key === 'U')
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
 </body>
 </html>
